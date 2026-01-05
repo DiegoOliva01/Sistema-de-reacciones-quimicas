@@ -1,0 +1,447 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   Sistema de Reacciones Químicas
+   Custom CSS Design System
+   ============================================ */
+
+/* CSS Variables - Design Tokens */
+:root {
+  /* Primary Colors - Chemistry Theme */
+  --color-primary: #6366f1;
+  --color-primary-light: #818cf8;
+  --color-primary-dark: #4f46e5;
+  
+  /* Element Category Colors */
+  --color-alkali-metal: #ff6b6b;
+  --color-alkaline-earth: #ffa94d;
+  --color-transition-metal: #ffd43b;
+  --color-post-transition-metal: #69db7c;
+  --color-metalloid: #38d9a9;
+  --color-nonmetal: #4dabf7;
+  --color-halogen: #748ffc;
+  --color-noble-gas: #da77f2;
+  --color-lanthanide: #f783ac;
+  --color-actinide: #e599f7;
+  --color-unknown: #868e96;
+  
+  /* Background Colors */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --bg-card: rgba(30, 41, 59, 0.8);
+  
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  
+  /* Animations */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a2e 50%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ============================================
+   Periodic Table Styles
+   ============================================ */
+
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(45px, 1fr));
+  gap: 4px;
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.element-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.element-cell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.element-cell:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 20px currentColor;
+}
+
+.element-cell:hover::before {
+  opacity: 1;
+}
+
+.element-cell.selected {
+  transform: scale(1.15);
+  z-index: 20;
+  box-shadow: 0 0 30px currentColor, inset 0 0 20px rgba(255,255,255,0.2);
+  border-color: var(--text-primary);
+}
+
+.element-symbol {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.element-number {
+  font-size: 0.6rem;
+  opacity: 0.7;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.element-name {
+  font-size: 0.5rem;
+  opacity: 0.8;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Element Category Colors */
+.element-cell.alkali-metal { background: linear-gradient(135deg, var(--color-alkali-metal), #c92a2a); color: white; }
+.element-cell.alkaline-earth { background: linear-gradient(135deg, var(--color-alkaline-earth), #d9480f); color: white; }
+.element-cell.transition-metal { background: linear-gradient(135deg, var(--color-transition-metal), #f59f00); color: #1a1a2e; }
+.element-cell.post-transition-metal { background: linear-gradient(135deg, var(--color-post-transition-metal), #2b8a3e); color: white; }
+.element-cell.metalloid { background: linear-gradient(135deg, var(--color-metalloid), #0ca678); color: white; }
+.element-cell.nonmetal { background: linear-gradient(135deg, var(--color-nonmetal), #1971c2); color: white; }
+.element-cell.halogen { background: linear-gradient(135deg, var(--color-halogen), #4c6ef5); color: white; }
+.element-cell.noble-gas { background: linear-gradient(135deg, var(--color-noble-gas), #ae3ec9); color: white; }
+.element-cell.lanthanide { background: linear-gradient(135deg, var(--color-lanthanide), #c2255c); color: white; }
+.element-cell.actinide { background: linear-gradient(135deg, var(--color-actinide), #9c36b5); color: white; }
+.element-cell.unknown { background: linear-gradient(135deg, var(--color-unknown), #495057); color: white; }
+
+/* ============================================
+   3D Viewer Container
+   ============================================ */
+
+.viewer-container {
+  width: 100%;
+  height: 500px;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+  position: relative;
+}
+
+.viewer-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.viewer-controls {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+}
+
+/* ============================================
+   Cards & Panels
+   ============================================ */
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--glass-shadow);
+}
+
+.panel {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--glass-border);
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+.btn-secondary {
+  background: var(--glass-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-tertiary);
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+/* ============================================
+   Loading & Animations
+   ============================================ */
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px currentColor; }
+  50% { box-shadow: 0 0 20px currentColor, 0 0 40px currentColor; }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--glass-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .periodic-table {
+    grid-template-columns: repeat(18, minmax(35px, 1fr));
+    gap: 2px;
+  }
+  
+  .element-symbol {
+    font-size: 1rem;
+  }
+  
+  .element-name {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .periodic-table {
+    grid-template-columns: repeat(18, minmax(28px, 1fr));
+    gap: 1px;
+    padding: 0.5rem;
+  }
+  
+  .element-symbol {
+    font-size: 0.8rem;
+  }
+  
+  .element-number {
+    font-size: 0.5rem;
+  }
+  
+  .viewer-container {
+    height: 350px;
+  }
+}
+
+/* ============================================
+   Explanation Panel
+   ============================================ */
+
+.explanation-panel {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--bg-tertiary);
+}
+
+.explanation-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.explanation-panel::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.explanation-panel::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.explanation-panel h1,
+.explanation-panel h2,
+.explanation-panel h3 {
+  color: var(--color-primary-light);
+  margin-top: 1rem;
+}
+
+.explanation-panel p {
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.explanation-panel strong {
+  color: var(--text-primary);
+}
+
+/* ============================================
+   Tooltip
+   ============================================ */
+
+.tooltip {
+  position: absolute;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  box-shadow: var(--glass-shadow);
+  z-index: 100;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ============================================
+   Selection Summary
+   ============================================ */
+
+.selection-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  min-height: 60px;
+  align-items: center;
+}
+
+.selected-element-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.selected-element-tag button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.selected-element-tag button:hover {
+  background: rgba(255,255,255,0.3);
+}
