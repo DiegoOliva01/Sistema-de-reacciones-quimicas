@@ -1,0 +1,182 @@
+[
+  {
+    "model": "reactions.reaction",
+    "pk": 16,
+    "fields": {
+      "equation": "2Fe + 3Cl₂ → 2FeCl₃",
+      "equation_html": "2Fe + 3Cl<sub>2</sub> → 2FeCl<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Fe", "count": 2, "state": "s"}, {"symbol": "Cl", "count": 6, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "FeCl3", "count": 2, "state": "s", "name": "Cloruro férrico"}],
+      "conditions": {"temperature": 300},
+      "enthalpy_change": -799.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "approach", "electron_transfer", "compound_formation"], "electron_transfer": [{"from": "Fe", "to": "Cl", "count": 3}], "duration_ms": 5000, "color_scheme": {"Fe": "#E06633", "Cl": "#1FF01F"}},
+      "description": "El hierro caliente reacciona con cloro gaseoso formando cloruro férrico de color marrón rojizo.",
+      "real_world_applications": ["Tratamiento de aguas", "Catalizador", "Grabado de circuitos"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 17,
+    "fields": {
+      "equation": "CaO + H₂O → Ca(OH)₂",
+      "equation_html": "CaO + H<sub>2</sub>O → Ca(OH)<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"formula": "CaO", "count": 1, "state": "s", "elements": ["Ca", "O"]}, {"formula": "H2O", "count": 1, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "Ca(OH)2", "count": 1, "state": "s", "name": "Hidróxido de calcio (cal apagada)"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -65.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["water_addition", "hydration", "product_formation"], "duration_ms": 3500, "color_scheme": {"Ca": "#3DFF00", "O": "#FF0D0D", "H": "#FFFFFF"}},
+      "description": "Apagado de la cal viva. Reacción muy exotérmica que libera mucho calor.",
+      "real_world_applications": ["Construcción", "Tratamiento de suelos", "Industria alimentaria"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 18,
+    "fields": {
+      "equation": "SO₂ + H₂O → H₂SO₃",
+      "equation_html": "SO<sub>2</sub> + H<sub>2</sub>O → H<sub>2</sub>SO<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "SO2", "count": 1, "state": "g", "elements": ["S", "O"]}, {"formula": "H2O", "count": 1, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "H2SO3", "count": 1, "state": "aq", "name": "Ácido sulfuroso"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -30.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["gas_dissolution", "hydration", "acid_formation"], "duration_ms": 4000, "color_scheme": {"S": "#FFFF30", "O": "#FF0D0D", "H": "#FFFFFF"}},
+      "description": "El dióxido de azufre se disuelve en agua formando ácido sulfuroso, componente de la lluvia ácida.",
+      "real_world_applications": ["Lluvia ácida", "Conservante alimentario", "Industria del vino"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 19,
+    "fields": {
+      "equation": "Cu + 4HNO₃ → Cu(NO₃)₂ + 2NO₂ + 2H₂O",
+      "equation_html": "Cu + 4HNO<sub>3</sub> → Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO<sub>2</sub> + 2H<sub>2</sub>O",
+      "reaction_type": "redox",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Cu", "count": 1, "state": "s"}, {"formula": "HNO3", "count": 4, "state": "aq", "elements": ["H", "N", "O"]}],
+      "products": [{"formula": "Cu(NO3)2", "count": 1, "state": "aq", "name": "Nitrato de cobre"}, {"formula": "NO2", "count": 2, "state": "g", "name": "Dióxido de nitrógeno"}, {"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25, "concentrated_acid": true},
+      "enthalpy_change": -280.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_attack", "electron_transfer", "gas_evolution", "solution_formation"], "duration_ms": 5500, "color_scheme": {"Cu": "#C88033", "H": "#FFFFFF", "N": "#3050F8", "O": "#FF0D0D"}},
+      "description": "El cobre se oxida con ácido nítrico concentrado produciendo vapores marrones de NO₂ y solución azul de Cu²⁺.",
+      "real_world_applications": ["Grabado de metales", "Producción de sales de cobre", "Análisis químico"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 20,
+    "fields": {
+      "equation": "2NaHCO₃ → Na₂CO₃ + H₂O + CO₂",
+      "equation_html": "2NaHCO<sub>3</sub> → Na<sub>2</sub>CO<sub>3</sub> + H<sub>2</sub>O + CO<sub>2</sub>",
+      "reaction_type": "decomposition",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "NaHCO3", "count": 2, "state": "s", "elements": ["Na", "H", "C", "O"]}],
+      "products": [{"formula": "Na2CO3", "count": 1, "state": "s", "name": "Carbonato de sodio"}, {"formula": "H2O", "count": 1, "state": "g", "name": "Vapor de agua"}, {"formula": "CO2", "count": 1, "state": "g", "name": "Dióxido de carbono"}],
+      "conditions": {"temperature": 270, "requires_heat": true},
+      "enthalpy_change": 129.0,
+      "is_exothermic": false,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "decomposition", "gas_release"], "duration_ms": 4500, "color_scheme": {"Na": "#AB5CF2", "H": "#FFFFFF", "C": "#909090", "O": "#FF0D0D"}},
+      "description": "Descomposición del bicarbonato de sodio por calor. Base del proceso de horneado.",
+      "real_world_applications": ["Polvo de hornear", "Extintores", "Antiácidos"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 21,
+    "fields": {
+      "equation": "4Fe + 3O₂ → 2Fe₂O₃",
+      "equation_html": "4Fe + 3O<sub>2</sub> → 2Fe<sub>2</sub>O<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Fe", "count": 4, "state": "s"}, {"symbol": "O", "count": 6, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "Fe2O3", "count": 2, "state": "s", "name": "Óxido férrico (herrumbre)"}],
+      "conditions": {"temperature": 25, "moisture": true},
+      "enthalpy_change": -1648.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["oxidation", "rust_formation"], "electron_transfer": [{"from": "Fe", "to": "O", "count": 3}], "duration_ms": 5000, "color_scheme": {"Fe": "#E06633", "O": "#FF0D0D"}},
+      "description": "Oxidación del hierro (herrumbre). Proceso lento a temperatura ambiente, acelerado por humedad.",
+      "real_world_applications": ["Corrosión de metales", "Pigmentos", "Producción de acero"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 22,
+    "fields": {
+      "equation": "Pb(NO₃)₂ + 2KI → PbI₂ + 2KNO₃",
+      "equation_html": "Pb(NO<sub>3</sub>)<sub>2</sub> + 2KI → PbI<sub>2</sub> + 2KNO<sub>3</sub>",
+      "reaction_type": "double-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "Pb(NO3)2", "count": 1, "state": "aq", "elements": ["Pb", "N", "O"]}, {"formula": "KI", "count": 2, "state": "aq", "elements": ["K", "I"]}],
+      "products": [{"formula": "PbI2", "count": 1, "state": "s", "name": "Yoduro de plomo"}, {"formula": "KNO3", "count": 2, "state": "aq", "name": "Nitrato de potasio"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -45.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["mixing", "ion_exchange", "golden_precipitation"], "precipitation": "PbI2", "duration_ms": 4000, "color_scheme": {"Pb": "#575961", "N": "#3050F8", "O": "#FF0D0D", "K": "#8F40D4", "I": "#940094"}},
+      "description": "Lluvia dorada. El yoduro de plomo precipita formando hermosos cristales amarillos.",
+      "real_world_applications": ["Fotografía", "Demostraciones químicas", "Células solares"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 23,
+    "fields": {
+      "equation": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+      "equation_html": "H<sub>2</sub>SO<sub>4</sub> + 2NaOH → Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O",
+      "reaction_type": "acid-base",
+      "difficulty_level": "basic",
+      "reactants": [{"formula": "H2SO4", "count": 1, "state": "aq", "elements": ["H", "S", "O"]}, {"formula": "NaOH", "count": 2, "state": "aq", "elements": ["Na", "O", "H"]}],
+      "products": [{"formula": "Na2SO4", "count": 1, "state": "aq", "name": "Sulfato de sodio"}, {"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -114.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["dissociation", "neutralization", "water_formation"], "duration_ms": 4000, "color_scheme": {"H": "#FFFFFF", "S": "#FFFF30", "O": "#FF0D0D", "Na": "#AB5CF2"}},
+      "description": "Neutralización con ácido sulfúrico diprótico. Requiere dos moles de base por cada mol de ácido.",
+      "real_world_applications": ["Producción de detergentes", "Industria del papel", "Tintes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 24,
+    "fields": {
+      "equation": "2Li + 2H₂O → 2LiOH + H₂",
+      "equation_html": "2Li + 2H<sub>2</sub>O → 2LiOH + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Li", "count": 2, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "LiOH", "count": 2, "state": "aq", "name": "Hidróxido de litio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -444.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "reaction", "gas_evolution"], "electron_transfer": [{"from": "Li", "to": "H", "count": 1}], "duration_ms": 4000, "color_scheme": {"Li": "#CC80FF", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El litio reacciona con agua de forma menos violenta que otros metales alcalinos, formando hidróxido de litio.",
+      "real_world_applications": ["Baterías de litio", "Lubricantes", "Purificación de aire"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 25,
+    "fields": {
+      "equation": "2H₂S + 3O₂ → 2SO₂ + 2H₂O",
+      "equation_html": "2H<sub>2</sub>S + 3O<sub>2</sub> → 2SO<sub>2</sub> + 2H<sub>2</sub>O",
+      "reaction_type": "combustion",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "H2S", "count": 2, "state": "g", "elements": ["H", "S"]}, {"symbol": "O", "count": 6, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "SO2", "count": 2, "state": "g", "name": "Dióxido de azufre"}, {"formula": "H2O", "count": 2, "state": "g", "name": "Vapor de agua"}],
+      "conditions": {"temperature": 300, "requires_ignition": true},
+      "enthalpy_change": -1036.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["ignition", "combustion", "product_formation"], "duration_ms": 4500, "color_scheme": {"H": "#FFFFFF", "S": "#FFFF30", "O": "#FF0D0D"}},
+      "description": "Combustión del sulfuro de hidrógeno (gas de huevo podrido). Produce llama azul y dióxido de azufre.",
+      "real_world_applications": ["Eliminación de H2S", "Producción de azufre", "Industria petroquímica"]
+    }
+  }
+]

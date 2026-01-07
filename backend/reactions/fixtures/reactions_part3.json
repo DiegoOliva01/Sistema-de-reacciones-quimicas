@@ -1,0 +1,272 @@
+[
+  {
+    "model": "reactions.reaction",
+    "pk": 26,
+    "fields": {
+      "equation": "2Na + 2H₂O → 2NaOH + H₂",
+      "equation_html": "2Na + 2H<sub>2</sub>O → 2NaOH + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Na", "count": 2, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "NaOH", "count": 2, "state": "aq", "name": "Hidróxido de sodio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -368.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "violent_reaction", "hydrogen_release"], "electron_transfer": [{"from": "Na", "to": "H", "count": 1}], "duration_ms": 3500, "color_scheme": {"Na": "#AB5CF2", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El sodio reacciona vigorosamente con agua produciendo soda cáustica e hidrógeno. El calor puede encender el hidrógeno liberado.",
+      "real_world_applications": ["Producción de NaOH", "Demostraciones químicas", "Baterías"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 27,
+    "fields": {
+      "equation": "4Na + O₂ → 2Na₂O",
+      "equation_html": "4Na + O<sub>2</sub> → 2Na<sub>2</sub>O",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Na", "count": 4, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "Na2O", "count": 2, "state": "s", "name": "Óxido de sodio"}],
+      "conditions": {"temperature": 130},
+      "enthalpy_change": -414.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "approach", "oxidation"], "electron_transfer": [{"from": "Na", "to": "O", "count": 1}], "duration_ms": 4000, "color_scheme": {"Na": "#AB5CF2", "O": "#FF0D0D"}},
+      "description": "El sodio se oxida rápidamente al aire formando óxido de sodio blanco. Por eso se almacena bajo aceite.",
+      "real_world_applications": ["Producción de hidróxidos", "Desecante industrial"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 28,
+    "fields": {
+      "equation": "2Rb + 2H₂O → 2RbOH + H₂",
+      "equation_html": "2Rb + 2H<sub>2</sub>O → 2RbOH + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Rb", "count": 2, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "RbOH", "count": 2, "state": "aq", "name": "Hidróxido de rubidio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -416.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "explosion", "hydrogen_ignition"], "electron_transfer": [{"from": "Rb", "to": "H", "count": 1}], "duration_ms": 2500, "color_scheme": {"Rb": "#702EB0", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El rubidio explota al contacto con agua. Reacción aún más violenta que el potasio.",
+      "real_world_applications": ["Células fotoeléctricas", "Investigación científica"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 29,
+    "fields": {
+      "equation": "2Cs + 2H₂O → 2CsOH + H₂",
+      "equation_html": "2Cs + 2H<sub>2</sub>O → 2CsOH + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Cs", "count": 2, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "CsOH", "count": 2, "state": "aq", "name": "Hidróxido de cesio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -420.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "massive_explosion"], "electron_transfer": [{"from": "Cs", "to": "H", "count": 1}], "duration_ms": 2000, "color_scheme": {"Cs": "#57178F", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El cesio es el metal alcalino más reactivo. Explota violentamente incluso con hielo.",
+      "real_world_applications": ["Relojes atómicos", "Células fotoeléctricas", "Investigación"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 30,
+    "fields": {
+      "equation": "Mg + O₂ → 2MgO",
+      "equation_html": "2Mg + O<sub>2</sub> → 2MgO",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Mg", "count": 2, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "MgO", "count": 2, "state": "s", "name": "Óxido de magnesio"}],
+      "conditions": {"temperature": 650, "requires_ignition": true},
+      "enthalpy_change": -1204.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["ignition", "bright_flame", "oxidation"], "electron_transfer": [{"from": "Mg", "to": "O", "count": 2}], "duration_ms": 4000, "color_scheme": {"Mg": "#8AFF00", "O": "#FF0D0D"}},
+      "description": "El magnesio arde con una llama blanca brillante tan intensa que puede causar daño ocular. Produce óxido de magnesio blanco.",
+      "real_world_applications": ["Bengalas", "Fuegos artificiales", "Fotografía flash antigua"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 31,
+    "fields": {
+      "equation": "Mg + 2H₂O → Mg(OH)₂ + H₂",
+      "equation_html": "Mg + 2H<sub>2</sub>O → Mg(OH)<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Mg", "count": 1, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "Mg(OH)2", "count": 1, "state": "s", "name": "Hidróxido de magnesio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 100, "requires_heat": true},
+      "enthalpy_change": -354.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "slow_reaction", "gas_evolution"], "duration_ms": 5000, "color_scheme": {"Mg": "#8AFF00", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El magnesio reacciona lentamente con agua fría, pero más rápido con agua caliente o vapor.",
+      "real_world_applications": ["Antiácidos (leche de magnesia)", "Retardante de llama"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 32,
+    "fields": {
+      "equation": "Ca + 2H₂O → Ca(OH)₂ + H₂",
+      "equation_html": "Ca + 2H<sub>2</sub>O → Ca(OH)<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Ca", "count": 1, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "Ca(OH)2", "count": 1, "state": "aq", "name": "Hidróxido de calcio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -430.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "bubbling", "hydroxide_formation"], "electron_transfer": [{"from": "Ca", "to": "H", "count": 2}], "duration_ms": 4000, "color_scheme": {"Ca": "#3DFF00", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El calcio reacciona moderadamente con agua formando una solución lechosa de hidróxido de calcio.",
+      "real_world_applications": ["Cal apagada", "Tratamiento de aguas", "Construcción"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 33,
+    "fields": {
+      "equation": "2Ca + O₂ → 2CaO",
+      "equation_html": "2Ca + O<sub>2</sub> → 2CaO",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Ca", "count": 2, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CaO", "count": 2, "state": "s", "name": "Óxido de calcio (cal viva)"}],
+      "conditions": {"temperature": 600},
+      "enthalpy_change": -1270.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "orange_flame", "oxidation"], "electron_transfer": [{"from": "Ca", "to": "O", "count": 2}], "duration_ms": 4000, "color_scheme": {"Ca": "#3DFF00", "O": "#FF0D0D"}},
+      "description": "El calcio arde con una llama rojo-naranja formando cal viva. El calcio metálico debe almacenarse bajo aceite.",
+      "real_world_applications": ["Producción de cemento", "Industria siderúrgica", "Desecante"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 34,
+    "fields": {
+      "equation": "Sr + 2H₂O → Sr(OH)₂ + H₂",
+      "equation_html": "Sr + 2H<sub>2</sub>O → Sr(OH)<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Sr", "count": 1, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "Sr(OH)2", "count": 1, "state": "aq", "name": "Hidróxido de estroncio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -445.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "vigorous_reaction", "gas_release"], "electron_transfer": [{"from": "Sr", "to": "H", "count": 2}], "duration_ms": 3500, "color_scheme": {"Sr": "#00FF00", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El estroncio reacciona vigorosamente con agua, más reactivo que el calcio pero menos que el bario.",
+      "real_world_applications": ["Fuegos artificiales rojos", "Refinerias de azúcar"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 35,
+    "fields": {
+      "equation": "Ba + 2H₂O → Ba(OH)₂ + H₂",
+      "equation_html": "Ba + 2H<sub>2</sub>O → Ba(OH)<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Ba", "count": 1, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "Ba(OH)2", "count": 1, "state": "aq", "name": "Hidróxido de bario"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -472.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "rapid_reaction", "hydrogen_evolution"], "electron_transfer": [{"from": "Ba", "to": "H", "count": 2}], "duration_ms": 3000, "color_scheme": {"Ba": "#00C900", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El bario reacciona rápidamente con agua. Sus compuestos son tóxicos excepto el sulfato de bario.",
+      "real_world_applications": ["Fuegos artificiales verdes", "Rayos X (sulfato)", "Vidrio especial"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 36,
+    "fields": {
+      "equation": "Be + 2HCl → BeCl₂ + H₂",
+      "equation_html": "Be + 2HCl → BeCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Be", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "BeCl2", "count": 1, "state": "aq", "name": "Cloruro de berilio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -292.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_attack", "dissolution", "gas_evolution"], "duration_ms": 4500, "color_scheme": {"Be": "#C2FF00", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El berilio reacciona con ácidos pero no con agua. Es el único metal alcalinotérreo que no reacciona con agua.",
+      "real_world_applications": ["Aleaciones aeroespaciales", "Ventanas de rayos X"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 37,
+    "fields": {
+      "equation": "2K + Br₂ → 2KBr",
+      "equation_html": "2K + Br<sub>2</sub> → 2KBr",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "K", "count": 2, "state": "s"}, {"symbol": "Br", "count": 2, "state": "l", "molecule": "Br2"}],
+      "products": [{"formula": "KBr", "count": 2, "state": "s", "name": "Bromuro de potasio"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -788.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["approach", "electron_transfer", "salt_formation"], "electron_transfer": [{"from": "K", "to": "Br", "count": 1}], "duration_ms": 4000, "color_scheme": {"K": "#8F40D4", "Br": "#A62929"}},
+      "description": "El potasio reacciona violentamente con bromo líquido formando bromuro de potasio blanco.",
+      "real_world_applications": ["Fotografía", "Sedante (histórico)", "Industria farmacéutica"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 38,
+    "fields": {
+      "equation": "2Li + Cl₂ → 2LiCl",
+      "equation_html": "2Li + Cl<sub>2</sub> → 2LiCl",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Li", "count": 2, "state": "s"}, {"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "LiCl", "count": 2, "state": "s", "name": "Cloruro de litio"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -814.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["approach", "reaction", "salt_formation"], "electron_transfer": [{"from": "Li", "to": "Cl", "count": 1}], "duration_ms": 4000, "color_scheme": {"Li": "#CC80FF", "Cl": "#1FF01F"}},
+      "description": "El litio reacciona con cloro formando cloruro de litio, usado como desecante y en baterías.",
+      "real_world_applications": ["Desecante", "Producción de litio metálico", "Aire acondicionado"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 39,
+    "fields": {
+      "equation": "Mg + Cl₂ → MgCl₂",
+      "equation_html": "Mg + Cl<sub>2</sub> → MgCl<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Mg", "count": 1, "state": "s"}, {"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "MgCl2", "count": 1, "state": "s", "name": "Cloruro de magnesio"}],
+      "conditions": {"temperature": 400},
+      "enthalpy_change": -641.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "approach", "ionic_bond"], "electron_transfer": [{"from": "Mg", "to": "Cl", "count": 2}], "duration_ms": 4000, "color_scheme": {"Mg": "#8AFF00", "Cl": "#1FF01F"}},
+      "description": "El magnesio caliente arde en atmósfera de cloro con llama brillante formando cloruro de magnesio.",
+      "real_world_applications": ["Producción de magnesio", "Sal de deshielo", "Suplementos"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 40,
+    "fields": {
+      "equation": "Ca + Cl₂ → CaCl₂",
+      "equation_html": "Ca + Cl<sub>2</sub> → CaCl<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Ca", "count": 1, "state": "s"}, {"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "CaCl2", "count": 1, "state": "s", "name": "Cloruro de calcio"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -795.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["approach", "electron_transfer", "salt_formation"], "electron_transfer": [{"from": "Ca", "to": "Cl", "count": 2}], "duration_ms": 4000, "color_scheme": {"Ca": "#3DFF00", "Cl": "#1FF01F"}},
+      "description": "El calcio reacciona vigorosamente con cloro. El cloruro de calcio es muy higroscópico.",
+      "real_world_applications": ["Desecante", "Sal para derretir hielo", "Aditivo alimentario"]
+    }
+  }
+]

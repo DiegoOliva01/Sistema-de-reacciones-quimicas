@@ -1,0 +1,272 @@
+[
+  {
+    "model": "reactions.reaction",
+    "pk": 41,
+    "fields": {
+      "equation": "2Cu + O₂ → 2CuO",
+      "equation_html": "2Cu + O<sub>2</sub> → 2CuO",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Cu", "count": 2, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CuO", "count": 2, "state": "s", "name": "Óxido cúprico"}],
+      "conditions": {"temperature": 300},
+      "enthalpy_change": -312.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "oxidation", "black_oxide"], "duration_ms": 4500, "color_scheme": {"Cu": "#C88033", "O": "#FF0D0D"}},
+      "description": "El cobre se oxida al aire caliente formando óxido cúprico negro. Es la base del patinado del cobre.",
+      "real_world_applications": ["Pigmentos", "Catalizadores", "Superconductores"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 42,
+    "fields": {
+      "equation": "Zn + 2HCl → ZnCl₂ + H₂",
+      "equation_html": "Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Zn", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "ZnCl2", "count": 1, "state": "aq", "name": "Cloruro de zinc"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -153.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_contact", "bubbling", "dissolution"], "duration_ms": 4000, "color_scheme": {"Zn": "#7D80B0", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El zinc reacciona activamente con ácido clorhídrico liberando burbujas de hidrógeno.",
+      "real_world_applications": ["Producción de hidrógeno", "Galvanizado", "Soldadura"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 43,
+    "fields": {
+      "equation": "Fe + 2HCl → FeCl₂ + H₂",
+      "equation_html": "Fe + 2HCl → FeCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Fe", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "FeCl2", "count": 1, "state": "aq", "name": "Cloruro ferroso"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -89.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_contact", "slow_bubbling", "green_solution"], "duration_ms": 5000, "color_scheme": {"Fe": "#E06633", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El hierro se disuelve en ácido clorhídrico formando una solución verde de cloruro ferroso.",
+      "real_world_applications": ["Tratamiento de aguas", "Producción de hierro", "Decapado de metales"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 44,
+    "fields": {
+      "equation": "Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O",
+      "equation_html": "Cu + 2H<sub>2</sub>SO<sub>4</sub> → CuSO<sub>4</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O",
+      "reaction_type": "redox",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Cu", "count": 1, "state": "s"}, {"formula": "H2SO4", "count": 2, "state": "l", "elements": ["H", "S", "O"]}],
+      "products": [{"formula": "CuSO4", "count": 1, "state": "aq", "name": "Sulfato de cobre"}, {"formula": "SO2", "count": 1, "state": "g", "name": "Dióxido de azufre"}, {"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 150, "concentrated_acid": true},
+      "enthalpy_change": -210.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "acid_attack", "gas_evolution", "blue_solution"], "duration_ms": 5500, "color_scheme": {"Cu": "#C88033", "H": "#FFFFFF", "S": "#FFFF30", "O": "#FF0D0D"}},
+      "description": "El cobre se oxida con ácido sulfúrico concentrado caliente, produciendo solución azul y gases tóxicos de SO₂.",
+      "real_world_applications": ["Producción de sulfato de cobre", "Galvanoplastia", "Fungicidas"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 45,
+    "fields": {
+      "equation": "Zn + S → ZnS",
+      "equation_html": "Zn + S → ZnS",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Zn", "count": 1, "state": "s"}, {"symbol": "S", "count": 1, "state": "s"}],
+      "products": [{"formula": "ZnS", "count": 1, "state": "s", "name": "Sulfuro de zinc"}],
+      "conditions": {"temperature": 500, "requires_heat": true},
+      "enthalpy_change": -206.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "reaction", "luminescent_product"], "duration_ms": 4500, "color_scheme": {"Zn": "#7D80B0", "S": "#FFFF30"}},
+      "description": "El zinc y el azufre reaccionan exotérmicamente. El sulfuro de zinc es fosforescente y se usa en pantallas.",
+      "real_world_applications": ["Pantallas fluorescentes", "Pintura luminosa", "Semiconductores"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 46,
+    "fields": {
+      "equation": "Ti + 2Cl₂ → TiCl₄",
+      "equation_html": "Ti + 2Cl<sub>2</sub> → TiCl<sub>4</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Ti", "count": 1, "state": "s"}, {"symbol": "Cl", "count": 4, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "TiCl4", "count": 1, "state": "l", "name": "Tetracloruro de titanio"}],
+      "conditions": {"temperature": 400},
+      "enthalpy_change": -804.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["heating", "chlorination", "liquid_formation"], "duration_ms": 5000, "color_scheme": {"Ti": "#BFC2C7", "Cl": "#1FF01F"}},
+      "description": "El titanio reacciona con cloro formando un líquido que humea al aire. Paso clave en la producción de titanio metálico.",
+      "real_world_applications": ["Producción de titanio", "Pantallas de humo", "Catalizadores"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 47,
+    "fields": {
+      "equation": "2Cr + 3O₂ → 2Cr₂O₃",
+      "equation_html": "4Cr + 3O<sub>2</sub> → 2Cr<sub>2</sub>O<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Cr", "count": 4, "state": "s"}, {"symbol": "O", "count": 6, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "Cr2O3", "count": 2, "state": "s", "name": "Óxido de cromo (III)"}],
+      "conditions": {"temperature": 600},
+      "enthalpy_change": -2270.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "oxidation", "green_oxide"], "duration_ms": 5000, "color_scheme": {"Cr": "#8A99C7", "O": "#FF0D0D"}},
+      "description": "El cromo se oxida formando óxido verde, que protege al metal de más corrosión (pasivación).",
+      "real_world_applications": ["Pigmento verde", "Abrasivos", "Catalizadores"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 48,
+    "fields": {
+      "equation": "2Mn + O₂ → 2MnO",
+      "equation_html": "2Mn + O<sub>2</sub> → 2MnO",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Mn", "count": 2, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "MnO", "count": 2, "state": "s", "name": "Óxido de manganeso (II)"}],
+      "conditions": {"temperature": 600},
+      "enthalpy_change": -770.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "oxidation"], "duration_ms": 4000, "color_scheme": {"Mn": "#9C7AC7", "O": "#FF0D0D"}},
+      "description": "El manganeso se oxida formando óxido verde grisáceo. Importante en la producción de acero.",
+      "real_world_applications": ["Producción de acero", "Baterías", "Fertilizantes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 49,
+    "fields": {
+      "equation": "Co + 2HCl → CoCl₂ + H₂",
+      "equation_html": "Co + 2HCl → CoCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Co", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "CoCl2", "count": 1, "state": "aq", "name": "Cloruro de cobalto"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -95.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_contact", "dissolution", "pink_solution"], "duration_ms": 4500, "color_scheme": {"Co": "#F090A0", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El cobalto se disuelve lentamente en ácido clorhídrico formando una solución rosa de cloruro de cobalto.",
+      "real_world_applications": ["Tintas invisibles", "Indicador de humedad", "Catalizadores"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 50,
+    "fields": {
+      "equation": "Ni + 2HCl → NiCl₂ + H₂",
+      "equation_html": "Ni + 2HCl → NiCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Ni", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "NiCl2", "count": 1, "state": "aq", "name": "Cloruro de níquel"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -76.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_contact", "slow_dissolution", "green_solution"], "duration_ms": 5000, "color_scheme": {"Ni": "#50D050", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El níquel se disuelve lentamente en ácido clorhídrico formando una solución verde.",
+      "real_world_applications": ["Niquelado", "Catalizadores", "Baterías recargables"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 51,
+    "fields": {
+      "equation": "2Ag + 2HNO₃ → 2AgNO₃ + H₂",
+      "equation_html": "3Ag + 4HNO<sub>3</sub> → 3AgNO<sub>3</sub> + NO + 2H<sub>2</sub>O",
+      "reaction_type": "redox",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Ag", "count": 3, "state": "s"}, {"formula": "HNO3", "count": 4, "state": "aq", "elements": ["H", "N", "O"]}],
+      "products": [{"formula": "AgNO3", "count": 3, "state": "aq", "name": "Nitrato de plata"}, {"formula": "NO", "count": 1, "state": "g", "name": "Óxido nítrico"}, {"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25, "dilute_acid": true},
+      "enthalpy_change": -150.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["acid_attack", "oxidation", "dissolution"], "duration_ms": 5000, "color_scheme": {"Ag": "#C0C0C0", "H": "#FFFFFF", "N": "#3050F8", "O": "#FF0D0D"}},
+      "description": "La plata solo se disuelve en ácidos oxidantes como el nítrico. No reacciona con HCl.",
+      "real_world_applications": ["Fotografía", "Espejo de plata", "Antisépticos"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 52,
+    "fields": {
+      "equation": "Au + 3HCl + HNO₃ → HAuCl₄ + NO + 2H₂O",
+      "equation_html": "Au + 3HCl + HNO<sub>3</sub> → HAuCl<sub>4</sub> + NO + 2H<sub>2</sub>O",
+      "reaction_type": "redox",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Au", "count": 1, "state": "s"}, {"formula": "HCl", "count": 3, "state": "aq", "elements": ["H", "Cl"]}, {"formula": "HNO3", "count": 1, "state": "aq", "elements": ["H", "N", "O"]}],
+      "products": [{"formula": "HAuCl4", "count": 1, "state": "aq", "name": "Ácido tetracloroáurico"}, {"formula": "NO", "count": 1, "state": "g", "name": "Óxido nítrico"}, {"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25, "aqua_regia": true},
+      "enthalpy_change": -120.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["mixing_acids", "gold_dissolution", "yellow_solution"], "duration_ms": 6000, "color_scheme": {"Au": "#FFD123", "H": "#FFFFFF", "Cl": "#1FF01F", "N": "#3050F8", "O": "#FF0D0D"}},
+      "description": "El agua regia (HCl + HNO₃) es la única mezcla que disuelve el oro. Forma una solución amarilla.",
+      "real_world_applications": ["Refinación de oro", "Recuperación de metales preciosos", "Análisis químico"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 53,
+    "fields": {
+      "equation": "2V + 5O₂ → 2V₂O₅",
+      "equation_html": "4V + 5O<sub>2</sub> → 2V<sub>2</sub>O<sub>5</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "V", "count": 4, "state": "s"}, {"symbol": "O", "count": 10, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "V2O5", "count": 2, "state": "s", "name": "Pentóxido de vanadio"}],
+      "conditions": {"temperature": 700},
+      "enthalpy_change": -3102.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "oxidation", "orange_product"], "duration_ms": 5000, "color_scheme": {"V": "#A6A6AB", "O": "#FF0D0D"}},
+      "description": "El vanadio se oxida a alta temperatura. El V₂O₅ naranja es un importante catalizador industrial.",
+      "real_world_applications": ["Catalizador para H2SO4", "Cerámica", "Baterías de vanadio"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 54,
+    "fields": {
+      "equation": "3Fe + 4H₂O → Fe₃O₄ + 4H₂",
+      "equation_html": "3Fe + 4H<sub>2</sub>O → Fe<sub>3</sub>O<sub>4</sub> + 4H<sub>2</sub>",
+      "reaction_type": "redox",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Fe", "count": 3, "state": "s"}, {"formula": "H2O", "count": 4, "state": "g", "elements": ["H", "O"]}],
+      "products": [{"formula": "Fe3O4", "count": 1, "state": "s", "name": "Magnetita"}, {"formula": "H2", "count": 4, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 500, "steam": true},
+      "enthalpy_change": -151.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["steam_contact", "oxidation", "magnetic_product"], "duration_ms": 5000, "color_scheme": {"Fe": "#E06633", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El hierro caliente reacciona con vapor de agua produciendo magnetita y liberando hidrógeno.",
+      "real_world_applications": ["Producción histórica de H2", "Magnetita", "Termita"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 55,
+    "fields": {
+      "equation": "Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag",
+      "equation_html": "Cu + 2AgNO<sub>3</sub> → Cu(NO<sub>3</sub>)<sub>2</sub> + 2Ag",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Cu", "count": 1, "state": "s"}, {"formula": "AgNO3", "count": 2, "state": "aq", "elements": ["Ag", "N", "O"]}],
+      "products": [{"formula": "Cu(NO3)2", "count": 1, "state": "aq", "name": "Nitrato de cobre"}, {"symbol": "Ag", "count": 2, "state": "s", "name": "Plata metálica"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -147.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["immersion", "silver_deposition", "blue_solution"], "electron_transfer": [{"from": "Cu", "to": "Ag", "count": 1}], "duration_ms": 5000, "color_scheme": {"Cu": "#C88033", "Ag": "#C0C0C0", "N": "#3050F8", "O": "#FF0D0D"}},
+      "description": "El cobre desplaza a la plata de la solución. Se depositan cristales de plata mientras la solución se vuelve azul.",
+      "real_world_applications": ["Árbol de Diana", "Plateado químico", "Demostraciones químicas"]
+    }
+  }
+]

@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-nucleus: #6366f1;
+  --color-electron: #06b6d4;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-nucleus);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-electron);
+}
+
+/* Element card styles */
+@layer components {
+  .element-cell {
+    @apply relative p-1 rounded cursor-pointer transition-all duration-200;
+    @apply hover:scale-105 hover:z-10 hover:shadow-lg;
+    @apply flex flex-col items-center justify-center;
+    min-width: 38px;
+    min-height: 42px;
+  }
+
+  .element-cell.selected {
+    @apply ring-2 ring-cyan-400 ring-opacity-75 shadow-md shadow-cyan-400/30;
+    animation: pulse 2s infinite;
+  }
+
+  .element-symbol {
+    @apply text-sm font-bold leading-tight;
+  }
+
+  .element-number {
+    @apply text-[8px] opacity-70 absolute top-0.5 left-1;
+  }
+
+  .element-name {
+    @apply text-[7px] opacity-80 mt-0.5 truncate w-full text-center leading-tight;
+  }
+
+  /* Category colors */
+  .category-alkali-metal { @apply bg-purple-500/80 hover:bg-purple-400; }
+  .category-alkaline-earth { @apply bg-green-500/80 hover:bg-green-400; }
+  .category-transition-metal { @apply bg-orange-500/80 hover:bg-orange-400; }
+  .category-post-transition-metal { @apply bg-amber-600/80 hover:bg-amber-500; }
+  .category-metalloid { @apply bg-teal-500/80 hover:bg-teal-400; }
+  .category-nonmetal { @apply bg-slate-400/80 hover:bg-slate-300 text-slate-900; }
+  .category-halogen { @apply bg-emerald-400/80 hover:bg-emerald-300; }
+  .category-noble-gas { @apply bg-sky-400/80 hover:bg-sky-300; }
+  .category-lanthanide { @apply bg-cyan-500/80 hover:bg-cyan-400; }
+  .category-actinide { @apply bg-blue-500/80 hover:bg-blue-400; }
+
+  /* Glass morphism panel */
+  .glass-panel {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl;
+  }
+
+  /* Reaction button */
+  .react-button {
+    @apply px-8 py-4 rounded-full font-bold text-lg;
+    @apply bg-gradient-to-r from-indigo-500 to-purple-600;
+    @apply hover:from-indigo-400 hover:to-purple-500;
+    @apply transition-all duration-300 transform hover:scale-105;
+    @apply shadow-lg shadow-indigo-500/30 hover:shadow-indigo-400/50;
+    @apply disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+.electron-orbit {
+  animation: orbit 2s linear infinite;
+}

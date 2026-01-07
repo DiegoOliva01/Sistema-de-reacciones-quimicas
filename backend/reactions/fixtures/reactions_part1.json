@@ -1,0 +1,272 @@
+[
+  {
+    "model": "reactions.reaction",
+    "pk": 1,
+    "fields": {
+      "equation": "2H₂ + O₂ → 2H₂O",
+      "equation_html": "2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "H", "count": 4, "state": "g", "molecule": "H2"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25, "requires_spark": true},
+      "enthalpy_change": -572.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["approach", "bond_break", "new_bonds", "formation"], "electron_sharing": [{"between": ["H", "O"], "electrons": 2}], "duration_ms": 5000, "color_scheme": {"H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "La síntesis del agua es una reacción de combustión donde el hidrógeno reacciona con el oxígeno liberando gran cantidad de energía.",
+      "real_world_applications": ["Celdas de combustible", "Cohetes espaciales", "Producción de energía limpia"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 2,
+    "fields": {
+      "equation": "2Na + Cl₂ → 2NaCl",
+      "equation_html": "2Na + Cl<sub>2</sub> → 2NaCl",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Na", "count": 2, "state": "s"}, {"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "NaCl", "count": 2, "state": "s", "name": "Cloruro de sodio"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -822.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "electron_transfer": [{"from": "Na", "to": "Cl", "count": 1}], "stages": ["approach", "electron_transfer", "ionic_formation"], "duration_ms": 4500, "color_scheme": {"Na": "#AB5CF2", "Cl": "#1FF01F"}},
+      "description": "Formación de sal de mesa. El sodio transfiere un electrón al cloro formando un enlace iónico.",
+      "real_world_applications": ["Sal de mesa", "Conservación de alimentos", "Industria química"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 3,
+    "fields": {
+      "equation": "C + O₂ → CO₂",
+      "equation_html": "C + O<sub>2</sub> → CO<sub>2</sub>",
+      "reaction_type": "combustion",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "C", "count": 1, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CO2", "count": 1, "state": "g", "name": "Dióxido de carbono"}],
+      "conditions": {"temperature": 700, "requires_heat": true},
+      "enthalpy_change": -393.5,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["approach", "combustion", "double_bonds"], "electron_sharing": [{"between": ["C", "O"], "electrons": 4}], "duration_ms": 4000, "color_scheme": {"C": "#909090", "O": "#FF0D0D"}},
+      "description": "Combustión del carbono. Cada átomo de carbono forma dos enlaces dobles con oxígeno.",
+      "real_world_applications": ["Respiración celular", "Industria del acero", "Efecto invernadero"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 4,
+    "fields": {
+      "equation": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+      "equation_html": "CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O",
+      "reaction_type": "combustion",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "CH4", "count": 1, "state": "g", "elements": ["C", "H"]}, {"symbol": "O", "count": 4, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CO2", "count": 1, "state": "g", "name": "Dióxido de carbono"}, {"formula": "H2O", "count": 2, "state": "g", "name": "Vapor de agua"}],
+      "conditions": {"temperature": 600, "requires_spark": true},
+      "enthalpy_change": -890.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["approach", "bond_break_ch4", "combustion", "product_formation"], "duration_ms": 6000, "color_scheme": {"C": "#909090", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "Combustión del metano (gas natural). Es la principal fuente de energía en calefacción doméstica.",
+      "real_world_applications": ["Gas natural doméstico", "Generación eléctrica", "Industria petroquímica"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 5,
+    "fields": {
+      "equation": "HCl + NaOH → NaCl + H₂O",
+      "equation_html": "HCl + NaOH → NaCl + H<sub>2</sub>O",
+      "reaction_type": "acid-base",
+      "difficulty_level": "basic",
+      "reactants": [{"formula": "HCl", "count": 1, "state": "aq", "elements": ["H", "Cl"]}, {"formula": "NaOH", "count": 1, "state": "aq", "elements": ["Na", "O", "H"]}],
+      "products": [{"formula": "NaCl", "count": 1, "state": "aq", "name": "Cloruro de sodio"}, {"formula": "H2O", "count": 1, "state": "l", "name": "Agua"}],
+      "conditions": {"temperature": 25, "in_solution": true},
+      "enthalpy_change": -57.3,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["dissociation", "proton_transfer", "neutralization"], "proton_transfer": {"from": "HCl", "to": "OH"}, "duration_ms": 4000, "color_scheme": {"H": "#FFFFFF", "Cl": "#1FF01F", "Na": "#AB5CF2", "O": "#FF0D0D"}},
+      "description": "Neutralización ácido-base clásica. El ácido clorhídrico reacciona con hidróxido de sodio formando sal y agua.",
+      "real_world_applications": ["Control de pH", "Tratamiento de aguas", "Industria alimentaria"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 6,
+    "fields": {
+      "equation": "Zn + CuSO₄ → ZnSO₄ + Cu",
+      "equation_html": "Zn + CuSO<sub>4</sub> → ZnSO<sub>4</sub> + Cu",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Zn", "count": 1, "state": "s"}, {"formula": "CuSO4", "count": 1, "state": "aq", "elements": ["Cu", "S", "O"]}],
+      "products": [{"formula": "ZnSO4", "count": 1, "state": "aq", "name": "Sulfato de zinc"}, {"symbol": "Cu", "count": 1, "state": "s", "name": "Cobre metálico"}],
+      "conditions": {"temperature": 25, "in_solution": true},
+      "enthalpy_change": -231.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["approach", "electron_transfer", "displacement", "deposition"], "electron_transfer": [{"from": "Zn", "to": "Cu", "count": 2}], "duration_ms": 5000, "color_scheme": {"Zn": "#7D80B0", "Cu": "#C88033", "S": "#FFFF30", "O": "#FF0D0D"}},
+      "description": "El zinc desplaza al cobre de la solución. El zinc es más reactivo, cede electrones al Cu²⁺ que se deposita como cobre metálico.",
+      "real_world_applications": ["Galvanizado", "Baterías", "Purificación de metales"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 7,
+    "fields": {
+      "equation": "Fe + S → FeS",
+      "equation_html": "Fe + S → FeS",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Fe", "count": 1, "state": "s"}, {"symbol": "S", "count": 1, "state": "s"}],
+      "products": [{"formula": "FeS", "count": 1, "state": "s", "name": "Sulfuro de hierro"}],
+      "conditions": {"temperature": 600, "requires_heat": true},
+      "enthalpy_change": -100.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "approach", "bond_formation"], "electron_transfer": [{"from": "Fe", "to": "S", "count": 2}], "duration_ms": 4000, "color_scheme": {"Fe": "#E06633", "S": "#FFFF30"}},
+      "description": "El hierro y el azufre se combinan al calentarse formando sulfuro de hierro, un compuesto de color negro.",
+      "real_world_applications": ["Producción de ácido sulfhídrico", "Industria metalúrgica"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 8,
+    "fields": {
+      "equation": "2H₂O₂ → 2H₂O + O₂",
+      "equation_html": "2H<sub>2</sub>O<sub>2</sub> → 2H<sub>2</sub>O + O<sub>2</sub>",
+      "reaction_type": "decomposition",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "H2O2", "count": 2, "state": "aq", "elements": ["H", "O"]}],
+      "products": [{"formula": "H2O", "count": 2, "state": "l", "name": "Agua"}, {"formula": "O2", "count": 1, "state": "g", "name": "Oxígeno"}],
+      "conditions": {"temperature": 25, "catalyst": "MnO2"},
+      "enthalpy_change": -196.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["catalyst_contact", "bond_break", "rearrangement", "gas_release"], "duration_ms": 4500, "color_scheme": {"H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "Descomposición catalítica del peróxido de hidrógeno. El MnO₂ acelera la reacción sin consumirse.",
+      "real_world_applications": ["Desinfección", "Blanqueamiento", "Propulsión de cohetes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 9,
+    "fields": {
+      "equation": "CaCO₃ → CaO + CO₂",
+      "equation_html": "CaCO<sub>3</sub> → CaO + CO<sub>2</sub>",
+      "reaction_type": "decomposition",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "CaCO3", "count": 1, "state": "s", "elements": ["Ca", "C", "O"]}],
+      "products": [{"formula": "CaO", "count": 1, "state": "s", "name": "Óxido de calcio (cal viva)"}, {"formula": "CO2", "count": 1, "state": "g", "name": "Dióxido de carbono"}],
+      "conditions": {"temperature": 900, "requires_heat": true},
+      "enthalpy_change": 178.0,
+      "is_exothermic": false,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "bond_break", "gas_release", "solid_formation"], "duration_ms": 5000, "color_scheme": {"Ca": "#3DFF00", "C": "#909090", "O": "#FF0D0D"}},
+      "description": "Calcinación de la piedra caliza. Requiere alta temperatura para romper el carbonato y liberar CO₂.",
+      "real_world_applications": ["Producción de cemento", "Cal para construcción", "Industria siderúrgica"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 10,
+    "fields": {
+      "equation": "N₂ + 3H₂ → 2NH₃",
+      "equation_html": "N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "N", "count": 2, "state": "g", "molecule": "N2"}, {"symbol": "H", "count": 6, "state": "g", "molecule": "H2"}],
+      "products": [{"formula": "NH3", "count": 2, "state": "g", "name": "Amoníaco"}],
+      "conditions": {"temperature": 450, "pressure": 200, "catalyst": "Fe"},
+      "enthalpy_change": -92.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["triple_bond_break", "approach", "new_bonds", "ammonia_formation"], "duration_ms": 6000, "color_scheme": {"N": "#3050F8", "H": "#FFFFFF"}},
+      "description": "Proceso Haber-Bosch. Síntesis industrial del amoníaco, requiere alta presión y catalizador de hierro.",
+      "real_world_applications": ["Fertilizantes", "Explosivos", "Industria química"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 11,
+    "fields": {
+      "equation": "Mg + 2HCl → MgCl₂ + H₂",
+      "equation_html": "Mg + 2HCl → MgCl<sub>2</sub> + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "Mg", "count": 1, "state": "s"}, {"formula": "HCl", "count": 2, "state": "aq", "elements": ["H", "Cl"]}],
+      "products": [{"formula": "MgCl2", "count": 1, "state": "aq", "name": "Cloruro de magnesio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -467.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["approach", "electron_transfer", "gas_evolution"], "electron_transfer": [{"from": "Mg", "to": "H", "count": 2}], "duration_ms": 4000, "color_scheme": {"Mg": "#8AFF00", "H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "El magnesio reacciona vigorosamente con ácido clorhídrico liberando burbujas de hidrógeno.",
+      "real_world_applications": ["Producción de hidrógeno", "Antiácidos", "Suplementos de magnesio"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 12,
+    "fields": {
+      "equation": "2KClO₃ → 2KCl + 3O₂",
+      "equation_html": "2KClO<sub>3</sub> → 2KCl + 3O<sub>2</sub>",
+      "reaction_type": "decomposition",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "KClO3", "count": 2, "state": "s", "elements": ["K", "Cl", "O"]}],
+      "products": [{"formula": "KCl", "count": 2, "state": "s", "name": "Cloruro de potasio"}, {"formula": "O2", "count": 3, "state": "g", "name": "Oxígeno"}],
+      "conditions": {"temperature": 400, "catalyst": "MnO2"},
+      "enthalpy_change": -89.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["heating", "decomposition", "oxygen_release"], "duration_ms": 4500, "color_scheme": {"K": "#8F40D4", "Cl": "#1FF01F", "O": "#FF0D0D"}},
+      "description": "Descomposición del clorato de potasio. Fuente de oxígeno en laboratorios y cerillas de seguridad.",
+      "real_world_applications": ["Producción de oxígeno", "Pirotecnia", "Cerillas"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 13,
+    "fields": {
+      "equation": "2Al + Fe₂O₃ → Al₂O₃ + 2Fe",
+      "equation_html": "2Al + Fe<sub>2</sub>O<sub>3</sub> → Al<sub>2</sub>O<sub>3</sub> + 2Fe",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Al", "count": 2, "state": "s"}, {"formula": "Fe2O3", "count": 1, "state": "s", "elements": ["Fe", "O"]}],
+      "products": [{"formula": "Al2O3", "count": 1, "state": "s", "name": "Óxido de aluminio"}, {"symbol": "Fe", "count": 2, "state": "l", "name": "Hierro fundido"}],
+      "conditions": {"temperature": 2500, "requires_ignition": true},
+      "enthalpy_change": -850.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["ignition", "thermite_reaction", "metal_displacement", "molten_iron"], "electron_transfer": [{"from": "Al", "to": "Fe", "count": 3}], "duration_ms": 6000, "color_scheme": {"Al": "#BFA6A6", "Fe": "#E06633", "O": "#FF0D0D"}},
+      "description": "Reacción termita. Extremadamente exotérmica, produce hierro fundido a temperaturas superiores a 2000°C.",
+      "real_world_applications": ["Soldadura de rieles", "Demolición", "Aplicaciones militares"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 14,
+    "fields": {
+      "equation": "AgNO₃ + NaCl → AgCl + NaNO₃",
+      "equation_html": "AgNO<sub>3</sub> + NaCl → AgCl + NaNO<sub>3</sub>",
+      "reaction_type": "double-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "AgNO3", "count": 1, "state": "aq", "elements": ["Ag", "N", "O"]}, {"formula": "NaCl", "count": 1, "state": "aq", "elements": ["Na", "Cl"]}],
+      "products": [{"formula": "AgCl", "count": 1, "state": "s", "name": "Cloruro de plata"}, {"formula": "NaNO3", "count": 1, "state": "aq", "name": "Nitrato de sodio"}],
+      "conditions": {"temperature": 25, "in_solution": true},
+      "enthalpy_change": -65.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["mixing", "ion_exchange", "precipitation"], "precipitation": "AgCl", "duration_ms": 4000, "color_scheme": {"Ag": "#C0C0C0", "N": "#3050F8", "O": "#FF0D0D", "Na": "#AB5CF2", "Cl": "#1FF01F"}},
+      "description": "Reacción de precipitación. El cloruro de plata es insoluble y precipita como sólido blanco.",
+      "real_world_applications": ["Fotografía analógica", "Análisis de cloruros", "Química forense"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 15,
+    "fields": {
+      "equation": "2K + 2H₂O → 2KOH + H₂",
+      "equation_html": "2K + 2H<sub>2</sub>O → 2KOH + H<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "K", "count": 2, "state": "s"}, {"formula": "H2O", "count": 2, "state": "l", "elements": ["H", "O"]}],
+      "products": [{"formula": "KOH", "count": 2, "state": "aq", "name": "Hidróxido de potasio"}, {"formula": "H2", "count": 1, "state": "g", "name": "Hidrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -392.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["contact", "violent_reaction", "hydrogen_ignition", "hydroxide_formation"], "electron_transfer": [{"from": "K", "to": "H", "count": 1}], "duration_ms": 3000, "color_scheme": {"K": "#8F40D4", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "El potasio reacciona violentamente con agua, produciendo llama púrpura característica y liberando hidrógeno.",
+      "real_world_applications": ["Producción de KOH", "Demostraciones químicas", "Baterías"]
+    }
+  }
+]

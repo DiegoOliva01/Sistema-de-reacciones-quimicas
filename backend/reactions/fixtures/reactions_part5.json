@@ -1,0 +1,272 @@
+[
+  {
+    "model": "reactions.reaction",
+    "pk": 56,
+    "fields": {
+      "equation": "H₂ + F₂ → 2HF",
+      "equation_html": "H<sub>2</sub> + F<sub>2</sub> → 2HF",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "H", "count": 2, "state": "g", "molecule": "H2"}, {"symbol": "F", "count": 2, "state": "g", "molecule": "F2"}],
+      "products": [{"formula": "HF", "count": 2, "state": "g", "name": "Fluoruro de hidrógeno"}],
+      "conditions": {"temperature": 25, "extreme_reactivity": true},
+      "enthalpy_change": -542.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["contact", "explosive_reaction", "hf_formation"], "duration_ms": 2000, "color_scheme": {"H": "#FFFFFF", "F": "#90E050"}},
+      "description": "El flúor es tan reactivo que explota con hidrógeno incluso en la oscuridad y a baja temperatura. El HF es extremadamente corrosivo.",
+      "real_world_applications": ["Grabado de vidrio", "Refinación de uranio", "Refrigerantes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 57,
+    "fields": {
+      "equation": "H₂ + Cl₂ → 2HCl",
+      "equation_html": "H<sub>2</sub> + Cl<sub>2</sub> → 2HCl",
+      "reaction_type": "synthesis",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "H", "count": 2, "state": "g", "molecule": "H2"}, {"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}],
+      "products": [{"formula": "HCl", "count": 2, "state": "g", "name": "Cloruro de hidrógeno"}],
+      "conditions": {"temperature": 25, "requires_light": true},
+      "enthalpy_change": -184.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["photoinitiation", "chain_reaction", "hcl_formation"], "duration_ms": 3500, "color_scheme": {"H": "#FFFFFF", "Cl": "#1FF01F"}},
+      "description": "La reacción es fotocatalizada: es explosiva bajo luz intensa pero lenta en oscuridad.",
+      "real_world_applications": ["Producción de ácido clorhídrico", "PVC", "Industria química"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 58,
+    "fields": {
+      "equation": "H₂ + Br₂ → 2HBr",
+      "equation_html": "H<sub>2</sub> + Br<sub>2</sub> → 2HBr",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "H", "count": 2, "state": "g", "molecule": "H2"}, {"symbol": "Br", "count": 2, "state": "l", "molecule": "Br2"}],
+      "products": [{"formula": "HBr", "count": 2, "state": "g", "name": "Bromuro de hidrógeno"}],
+      "conditions": {"temperature": 200},
+      "enthalpy_change": -72.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["heating", "approach", "hbr_formation"], "duration_ms": 4000, "color_scheme": {"H": "#FFFFFF", "Br": "#A62929"}},
+      "description": "La reacción hidrógeno-bromo es más lenta que con cloro. Requiere calentamiento.",
+      "real_world_applications": ["Síntesis orgánica", "Farmacéuticos", "Bromuros"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 59,
+    "fields": {
+      "equation": "H₂ + I₂ → 2HI",
+      "equation_html": "H<sub>2</sub> + I<sub>2</sub> → 2HI",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "H", "count": 2, "state": "g", "molecule": "H2"}, {"symbol": "I", "count": 2, "state": "s", "molecule": "I2"}],
+      "products": [{"formula": "HI", "count": 2, "state": "g", "name": "Yoduro de hidrógeno"}],
+      "conditions": {"temperature": 400, "catalyst": "Pt"},
+      "enthalpy_change": 52.0,
+      "is_exothermic": false,
+      "animation_data": {"bond_type": "covalent", "stages": ["heating", "iodine_sublimation", "hi_formation"], "duration_ms": 5000, "color_scheme": {"H": "#FFFFFF", "I": "#940094"}},
+      "description": "Reacción reversible y endotérmica. Es el ejemplo clásico de equilibrio químico.",
+      "real_world_applications": ["Estudio de equilibrios", "Síntesis orgánica", "Yoduros"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 60,
+    "fields": {
+      "equation": "Cl₂ + 2NaBr → 2NaCl + Br₂",
+      "equation_html": "Cl<sub>2</sub> + 2NaBr → 2NaCl + Br<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Cl", "count": 2, "state": "g", "molecule": "Cl2"}, {"formula": "NaBr", "count": 2, "state": "aq", "elements": ["Na", "Br"]}],
+      "products": [{"formula": "NaCl", "count": 2, "state": "aq", "name": "Cloruro de sodio"}, {"symbol": "Br", "count": 2, "state": "l", "molecule": "Br2", "name": "Bromo"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -100.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["gas_dissolution", "displacement", "bromine_release"], "duration_ms": 4000, "color_scheme": {"Cl": "#1FF01F", "Na": "#AB5CF2", "Br": "#A62929"}},
+      "description": "El cloro desplaza al bromo porque es más reactivo. La solución se vuelve naranja-marrón por el Br₂.",
+      "real_world_applications": ["Extracción de bromo del agua de mar", "Demostración de reactividad"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 61,
+    "fields": {
+      "equation": "Br₂ + 2KI → 2KBr + I₂",
+      "equation_html": "Br<sub>2</sub> + 2KI → 2KBr + I<sub>2</sub>",
+      "reaction_type": "single-replacement",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Br", "count": 2, "state": "l", "molecule": "Br2"}, {"formula": "KI", "count": 2, "state": "aq", "elements": ["K", "I"]}],
+      "products": [{"formula": "KBr", "count": 2, "state": "aq", "name": "Bromuro de potasio"}, {"symbol": "I", "count": 2, "state": "s", "molecule": "I2", "name": "Yodo"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -80.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "ionic", "stages": ["bromine_addition", "displacement", "iodine_precipitation"], "duration_ms": 4000, "color_scheme": {"Br": "#A62929", "K": "#8F40D4", "I": "#940094"}},
+      "description": "El bromo desplaza al yodo. La solución se vuelve marrón oscuro por el yodo liberado.",
+      "real_world_applications": ["Serie de reactividad de halógenos", "Extracción de yodo"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 62,
+    "fields": {
+      "equation": "P₄ + 5O₂ → P₄O₁₀",
+      "equation_html": "P<sub>4</sub> + 5O<sub>2</sub> → P<sub>4</sub>O<sub>10</sub>",
+      "reaction_type": "combustion",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "P", "count": 4, "state": "s", "molecule": "P4"}, {"symbol": "O", "count": 10, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "P4O10", "count": 1, "state": "s", "name": "Decaóxido de tetrafósforo"}],
+      "conditions": {"temperature": 50, "requires_ignition": true},
+      "enthalpy_change": -2984.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["ignition", "white_smoke", "oxide_formation"], "duration_ms": 4500, "color_scheme": {"P": "#FF8000", "O": "#FF0D0D"}},
+      "description": "El fósforo blanco arde espontáneamente al aire produciendo humo blanco denso de P₄O₁₀.",
+      "real_world_applications": ["Desecante", "Síntesis de ácido fosfórico", "Municiones incendiarias"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 63,
+    "fields": {
+      "equation": "S + O₂ → SO₂",
+      "equation_html": "S + O<sub>2</sub> → SO<sub>2</sub>",
+      "reaction_type": "combustion",
+      "difficulty_level": "basic",
+      "reactants": [{"symbol": "S", "count": 1, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "SO2", "count": 1, "state": "g", "name": "Dióxido de azufre"}],
+      "conditions": {"temperature": 250, "requires_ignition": true},
+      "enthalpy_change": -297.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["ignition", "blue_flame", "so2_formation"], "duration_ms": 4000, "color_scheme": {"S": "#FFFF30", "O": "#FF0D0D"}},
+      "description": "El azufre arde con llama azul característica produciendo SO₂, un gas de olor picante.",
+      "real_world_applications": ["Producción de H2SO4", "Desinfección", "Conservante alimentario"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 64,
+    "fields": {
+      "equation": "2SO₂ + O₂ → 2SO₃",
+      "equation_html": "2SO<sub>2</sub> + O<sub>2</sub> → 2SO<sub>3</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"formula": "SO2", "count": 2, "state": "g", "elements": ["S", "O"]}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "SO3", "count": 2, "state": "g", "name": "Trióxido de azufre"}],
+      "conditions": {"temperature": 450, "catalyst": "V2O5", "pressure": 2},
+      "enthalpy_change": -198.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["catalyst_contact", "oxidation", "so3_formation"], "duration_ms": 5000, "color_scheme": {"S": "#FFFF30", "O": "#FF0D0D"}},
+      "description": "Proceso de contacto para producción de ácido sulfúrico. Usa V₂O₅ como catalizador.",
+      "real_world_applications": ["Producción de H2SO4", "Industria química", "Fertizantes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 65,
+    "fields": {
+      "equation": "4NH₃ + 5O₂ → 4NO + 6H₂O",
+      "equation_html": "4NH<sub>3</sub> + 5O<sub>2</sub> → 4NO + 6H<sub>2</sub>O",
+      "reaction_type": "redox",
+      "difficulty_level": "advanced",
+      "reactants": [{"formula": "NH3", "count": 4, "state": "g", "elements": ["N", "H"]}, {"symbol": "O", "count": 10, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "NO", "count": 4, "state": "g", "name": "Óxido nítrico"}, {"formula": "H2O", "count": 6, "state": "g", "name": "Vapor de agua"}],
+      "conditions": {"temperature": 850, "catalyst": "Pt-Rh"},
+      "enthalpy_change": -907.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["catalyst_contact", "oxidation", "no_formation"], "duration_ms": 5500, "color_scheme": {"N": "#3050F8", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "Proceso Ostwald - primer paso en la producción de ácido nítrico a partir de amoníaco.",
+      "real_world_applications": ["Producción de HNO3", "Explosivos", "Fertizantes"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 66,
+    "fields": {
+      "equation": "2NO + O₂ → 2NO₂",
+      "equation_html": "2NO + O<sub>2</sub> → 2NO<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "NO", "count": 2, "state": "g", "elements": ["N", "O"]}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "NO2", "count": 2, "state": "g", "name": "Dióxido de nitrógeno"}],
+      "conditions": {"temperature": 25},
+      "enthalpy_change": -114.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["gas_mixing", "oxidation", "brown_gas"], "duration_ms": 3500, "color_scheme": {"N": "#3050F8", "O": "#FF0D0D"}},
+      "description": "El NO incoloro se oxida rápidamente al aire formando NO₂ marrón, componente del smog.",
+      "real_world_applications": ["Contaminación atmosférica", "Proceso Ostwald", "Smog fotoquímico"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 67,
+    "fields": {
+      "equation": "Si + O₂ → SiO₂",
+      "equation_html": "Si + O<sub>2</sub> → SiO<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "intermediate",
+      "reactants": [{"symbol": "Si", "count": 1, "state": "s"}, {"symbol": "O", "count": 2, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "SiO2", "count": 1, "state": "s", "name": "Dióxido de silicio (sílice)"}],
+      "conditions": {"temperature": 1000},
+      "enthalpy_change": -911.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["high_temp", "oxidation", "silica_formation"], "duration_ms": 5000, "color_scheme": {"Si": "#F0C8A0", "O": "#FF0D0D"}},
+      "description": "El silicio se oxida a alta temperatura. La capa de SiO₂ protege al silicio de más oxidación.",
+      "real_world_applications": ["Semiconductores", "Vidrio", "Cuarzo"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 68,
+    "fields": {
+      "equation": "Xe + F₂ → XeF₂",
+      "equation_html": "Xe + F<sub>2</sub> → XeF<sub>2</sub>",
+      "reaction_type": "synthesis",
+      "difficulty_level": "advanced",
+      "reactants": [{"symbol": "Xe", "count": 1, "state": "g"}, {"symbol": "F", "count": 2, "state": "g", "molecule": "F2"}],
+      "products": [{"formula": "XeF2", "count": 1, "state": "s", "name": "Difluoruro de xenón"}],
+      "conditions": {"temperature": 400, "UV_light": true},
+      "enthalpy_change": -108.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["uv_irradiation", "approach", "compound_formation"], "duration_ms": 5000, "color_scheme": {"Xe": "#429EB0", "F": "#90E050"}},
+      "description": "Los gases nobles pueden formar compuestos con flúor. El XeF₂ es un oxidante fuerte.",
+      "real_world_applications": ["Grabado de semiconductores", "Fluoración", "Investigación"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 69,
+    "fields": {
+      "equation": "2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O",
+      "equation_html": "2C<sub>2</sub>H<sub>6</sub> + 7O<sub>2</sub> → 4CO<sub>2</sub> + 6H<sub>2</sub>O",
+      "reaction_type": "combustion",
+      "difficulty_level": "intermediate",
+      "reactants": [{"formula": "C2H6", "count": 2, "state": "g", "elements": ["C", "H"]}, {"symbol": "O", "count": 14, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CO2", "count": 4, "state": "g", "name": "Dióxido de carbono"}, {"formula": "H2O", "count": 6, "state": "g", "name": "Vapor de agua"}],
+      "conditions": {"temperature": 500, "requires_spark": true},
+      "enthalpy_change": -2856.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["ignition", "combustion", "products"], "duration_ms": 5000, "color_scheme": {"C": "#909090", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "Combustión completa del etano, componente del gas natural.",
+      "real_world_applications": ["Gas natural", "Producción de etileno", "Calefacción"]
+    }
+  },
+  {
+    "model": "reactions.reaction",
+    "pk": 70,
+    "fields": {
+      "equation": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+      "equation_html": "C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> → 3CO<sub>2</sub> + 4H<sub>2</sub>O",
+      "reaction_type": "combustion",
+      "difficulty_level": "basic",
+      "reactants": [{"formula": "C3H8", "count": 1, "state": "g", "elements": ["C", "H"]}, {"symbol": "O", "count": 10, "state": "g", "molecule": "O2"}],
+      "products": [{"formula": "CO2", "count": 3, "state": "g", "name": "Dióxido de carbono"}, {"formula": "H2O", "count": 4, "state": "g", "name": "Vapor de agua"}],
+      "conditions": {"temperature": 500, "requires_spark": true},
+      "enthalpy_change": -2220.0,
+      "is_exothermic": true,
+      "animation_data": {"bond_type": "covalent", "stages": ["ignition", "combustion", "products"], "duration_ms": 5000, "color_scheme": {"C": "#909090", "H": "#FFFFFF", "O": "#FF0D0D"}},
+      "description": "Combustión del propano, el gas de las bombonas domésticas y camping.",
+      "real_world_applications": ["Gas licuado (GLP)", "Soldadura", "Calefacción"]
+    }
+  }
+]
